@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col">
+    <h2>Candidatos</h2>
+    <tr *ngFor="let candidato of candidatos; let i = index">
+      <td>{{i+1}}.</td>
+      <td (click)="pintarDatos(i)">{{candidato.nombre}} {{candidato.apellido}}</td>
+    </tr>
+  </div>
+  <div class="col order-1">
+    <h2>Datos candidatos</h2>
+    <tr *ngIf="ind != -1">
+      <div class="row">
+        <td>Nombre: {{candidatos[ind].nombre}}</td>
+      </div>
+      <div class="row">
+        <td>Edad: {{candidatos[ind].edad}}</td>
+      </div>
+      <div clas="row">
+        <td>Peso: {{candidatos[ind].peso}}</td>
+      </div>
+      <div class="row">
+        <td>Apodo: {{candidatos[ind].apodo}}</td>
+      </div>
+    </tr>
+  </div>
+  <div class="col order-2">
+    <h2>Foto</h2>
+    <tr *ngIf="ind != -1">
+      <div class="row">
+        <td><img class="avatar" src="{{candidatos[ind].avatar}}"></td>
+      </div>
+    </tr>
+  </div>
+</div>
+<button class="button" type="button" (click)="limpiar()">Limpiar registro</button>
