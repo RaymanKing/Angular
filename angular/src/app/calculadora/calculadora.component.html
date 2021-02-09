@@ -1,8 +1,17 @@
 <h1 class="titu">Operaciones disponibles</h1>
-<div class="col">
-  <button type="submit" (click)="sumar()" class="btn btn-primary">Suma</button>
-  <button type="submit" (click)="restar()" class="btn btn-secondary">Resta</button>
-  <button type="submit" (click)="multiplicar()" class="btn btn-success">Multiplicación</button>
-  <button type="submit" (click)="dividir()" class="btn btn-danger">División</button>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <input type="number" [(ngModel)]="numero1">
+    </div>
+    <div class="col">
+      <input type="number" [(ngModel)]="numero2">
+    </div>
+  </div>
 </div>
-<p class="resultado">{{resultado}}</p>
+<div class="col">
+  <button type="submit" (click)="operacion(1)" class="btn btn-primary">Suma</button>
+  <button type="submit" (click)="operacion(2)" class="btn btn-secondary">Resta</button>
+  <button type="submit" (click)="operacion(3)" class="btn btn-success">Multiplicación</button>
+  <button type="submit" (click)="operacion(4)" class="btn btn-danger">División</button>
+</div>

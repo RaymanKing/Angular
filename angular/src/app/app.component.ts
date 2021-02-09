@@ -10,4 +10,9 @@ export class AppComponent {
 
   public numero1 : number = 0;
   public numero2 : number = 0;
+  resultadoPadre : number = 0;
+
+  procesar(resultado : number){
+    this.resultadoPadre = resultado;
+  }
 }
