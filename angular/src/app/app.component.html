@@ -2,3 +2,15 @@
 <app-lista></app-lista>
 <h1>Candidatos</h1>
 <app-candidatos></app-candidatos>
+<h1 class="titu">Calculadora Rayman</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <input type="number" [(ngModel)]="numero1">
+    </div>
+    <div class="col">
+      <input type="number" [(ngModel)]="numero2">
+    </div>
+  </div>
+</div>
+<app-calculadora [numero1]="numero1" [numero2]="numero2"></app-calculadora>

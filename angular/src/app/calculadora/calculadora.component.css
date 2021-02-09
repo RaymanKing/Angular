@@ -5,5 +5,9 @@
 
 .col{
   text-align: center;
-  margin-top: 20px;
+}
+
+.resultado{
+  text-align: center;
+  font-size: 70px;
 }
